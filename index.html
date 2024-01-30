@@ -4,104 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-
-        #calculator {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 10px;
-            max-width: 400px;
-            margin: auto;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            padding: 20px;
-        }
-
-        #display {
-            grid-column: span 4;
-            text-align: right;
-            font-size: 1.5em;
-            padding: 10px;
-            background-color: #f2f2f2;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-bottom: 10px;
-        }
-
-        button {
-            font-size: 1.2em;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            background-color: #e0e0e0;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #d1d1d1;
-        }
-    </style>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body>
-    
-    <div id="calculator">
-        <h1>CALCULATOR</h1>
-        <div id="display">0</div>
-        <button onclick="clearDisplay()">C</button>
-        <button onclick="appendToDisplay('/')">/</button>
-        <button onclick="appendToDisplay('*')">*</button>
-        <button onclick="appendToDisplay('7')">7</button>
-        <button onclick="appendToDisplay('8')">8</button>
-        <button onclick="appendToDisplay('9')">9</button>
-        <button onclick="appendToDisplay('-')">-</button>
-        <button onclick="appendToDisplay('4')">4</button>
-        <button onclick="appendToDisplay('5')">5</button>
-        <button onclick="appendToDisplay('6')">6</button>
-        <button onclick="appendToDisplay('+')">+</button>
-        <button onclick="appendToDisplay('1')">1</button>
-        <button onclick="appendToDisplay('2')">2</button>
-        <button onclick="appendToDisplay('3')">3</button>
-        <button onclick="calculateResult()">=</button>
-        <button onclick="appendToDisplay('0')">0</button>
-        <button onclick="appendToDisplay('.')">.</button>
-    </div>
+    <header>
+        <h1>Muhammad Usama</h1>
+        <p>Web Developer | UI/UX Enthusiast</p>
+    </header>
 
-    <script>
-        let display = document.getElementById('display');
-        let expression = '';
+    <section id="about">
+        <img src="https://blogtimenow.com/wp-content/uploads/2014/06/hide-facebook-profile-picture-notification.jpg" alt="Your Name">
+        <div class="bio">
+            <p>Hi, I'm Muhammad Usama, a passionate web developer with a strong foundation in front-end and back-end technologies.
+                I love turning ideas into interactive and user-friendly websites. Let's create something amazing together!</p>
+        </div>
+    </section>
 
-        function appendToDisplay(value) {
-            expression += value;
-            display.textContent = expression;
-        }
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <p>HTML | CSS | JavaScript | Wordpress | C# | SQL</p>
+    </section>
 
-        function clearDisplay() {
-            expression = '';
-            display.textContent = '0';
-        }
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1HVNHQmF6XqXS0xqpvfcJFY3cQIAQEB3XmJ_edOZdMQ&s" alt="Project 1">
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of Project 2. Curabitur tincidunt, libero nec tincidunt cursus.</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/919/919826.png" width="250px" alt="Project 2">
+        </div>
 
-        function calculateResult() {
-            try {
-                expression = eval(expression).toString();
-                display.textContent = expression;
-            } catch (error) {
-                display.textContent = 'Error';
-            }
-        }
-    </script>
+    </section>
+
+    <section id="resume">
+        <a href="your-resume.pdf" class="resume" download>Download Resume</a>
+    </section>
+
+    <section id="contact" class="contact swipe-out">
+        <h2>Contact</h2>
+        <p>Email: usama.email@example.com</p>
+        <p>Phone: (123) 456-7890</p>
+    </section>
+
+    <footer class="swipe-out">
+        <p>&copy; 2024 Muhammad Usama All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
